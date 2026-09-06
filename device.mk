@@ -330,6 +330,10 @@ PRODUCT_PACKAGES += \
     vendor.qti.qspa-service \
     qspa_vendor.rc
 
+# SurfaceFlinger
+$(call soong_config_set,surfaceflinger,frame_rate_category_high,120)
+$(call soong_config_set,surfaceflinger,frame_rate_category_min,60)
+
 # Shipping API
 BOARD_SHIPPING_API_LEVEL := 202404
 PRODUCT_SHIPPING_API_LEVEL := 36
